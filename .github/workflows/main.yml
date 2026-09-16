@@ -15,16 +15,23 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Configurar Java 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
 
       - name: Configurar Android SDK
         uses: android-actions/setup-android@v4
+        with:
+          accept-android-sdk-licenses: 'yes'
+          log-accepted-android-sdk-licenses: 'false'
+          packages: ''
 
-      - name: Instalar Android 35
-        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+      - name: Aceitar licencas Android
+        run: yes | sdkmanager --licenses >/dev/null || true
+
+      - name: Instalar Android SDK 35
+        run: sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
 
       - name: Configurar Gradle
         uses: gradle/actions/setup-gradle@v4
