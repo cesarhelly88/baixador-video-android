@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Baixador de Vídeo"
+                android:textColor="@color/text"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Cole ou compartilhe o link do seu vídeo do YouTube."
+                android:textColor="@color/muted"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Link do vídeo"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/urlInput"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg"
+                    android:hint="https://youtu.be/..."
+                    android:inputType="textUri"
+                    android:maxLines="1"
+                    android:paddingHorizontal="12dp"
+                    android:textSize="14sp"/>
+
+                <Button
+                    android:id="@+id/pasteBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="8dp"
+                    android:text="COLAR"
+                    android:textAllCaps="true"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Formato / qualidade"
+                android:textColor="@color/text"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:id="@+id/formatSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/input_bg"
+                android:paddingHorizontal="10dp"/>
+
+            <Button
+                android:id="@+id/downloadBtn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/button_bg"
+                android:text="BAIXAR"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:text="CANCELAR DOWNLOAD"
+                android:textColor="@color/danger"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="18dp"
+                android:max="100"
+                android:progress="0"/>
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#F3F4F6"
+                android:padding="12dp"
+                android:text="Preparando o aplicativo..."
+                android:textColor="@color/text"
+                android:textSize="13sp"/>
+
+            <Button
+                android:id="@+id/updateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:text="ATUALIZAR MOTOR DE DOWNLOAD"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Os arquivos concluídos são publicados em Downloads/Baixador de Vídeo. Use apenas para conteúdo que você tem direito de baixar."
+                android:textColor="@color/muted"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
