@@ -1,0 +1,42 @@
+COMO GERAR O APK SEM ANDROID STUDIO
+
+Você não precisa instalar Android Studio, Java ou Gradle no seu computador.
+O GitHub pode compilar o aplicativo automaticamente.
+
+PASSO A PASSO
+
+1. Entre em https://github.com e crie uma conta, caso ainda não tenha.
+
+2. Clique em "+" > "New repository".
+
+3. Dê um nome, por exemplo:
+   baixador-video-android
+
+4. Crie o repositório.
+
+5. Envie TODO o conteúdo desta pasta para o repositório.
+   IMPORTANTE: a pasta .github também precisa ser enviada.
+
+6. Abra a aba "Actions" do repositório.
+
+7. Abra o workflow chamado:
+   "Gerar APK Android"
+
+8. Clique em "Run workflow" > "Run workflow".
+
+9. Quando a execução ficar verde, abra a execução concluída.
+
+10. Na parte "Artifacts", baixe:
+    Baixador-de-Video-Android
+
+11. O ZIP baixado pelo GitHub conterá:
+    app-debug.apk
+
+12. Envie app-debug.apk para o celular e abra para instalar.
+
+OBSERVAÇÃO
+A primeira compilação baixa automaticamente as bibliotecas Android,
+yt-dlp e FFmpeg. Isso é feito nos servidores do GitHub, não no seu PC.
+
+O APK de debug é suficiente para instalar e testar no seu próprio celular.
+Para publicar em loja seria necessário assinar uma versão release.

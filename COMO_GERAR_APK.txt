@@ -1,0 +1,12 @@
+1) Instale o Android Studio no Windows.
+2) Extraia este ZIP.
+3) No Android Studio clique em Open e selecione a pasta BaixadorYouTubeAndroid.
+4) Espere a mensagem de sincronização do Gradle terminar.
+5) Clique em Build > Build App Bundle(s) / APK(s) > Build APK(s).
+6) Clique em "locate" quando o Android Studio terminar.
+7) O arquivo será app-debug.apk.
+8) Copie o app-debug.apk para o Android e instale.
+
+Se o Android bloquear a instalação:
+Configurações > Segurança/Apps > permitir "Instalar apps desconhecidos"
+para o navegador/gerenciador de arquivos usado para abrir o APK.
